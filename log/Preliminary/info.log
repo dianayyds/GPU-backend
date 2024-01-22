@@ -1,0 +1,99 @@
+2023-08-01 17:03:01 [INF] main.go:18 | start seelong
+2023-08-02 17:46:05 [INF] config.go:18 | begin seelog at 1690969565
+2023-08-02 17:53:18 [INF] config.go:18 | begin seelog at 2023-08-02 17:53:18
+2023-08-02 18:20:21 [INF] config.go:33 | Begin Seelog
+2023-08-02 18:25:09 [INF] config.go:33 | Begin Seelog
+2023-08-02 18:26:01 [INF] config.go:33 | Begin Seelog
+2023-08-02 18:28:49 [INF] config.go:33 | Begin Seelog
+2023-08-03 09:49:21 [INF] config.go:33 | Begin Seelog
+2023-08-03 09:51:01 [INF] config.go:33 | Begin Seelog
+2023-08-03 10:01:47 [INF] config.go:33 | Begin Seelog
+2023-08-03 10:05:36 [INF] config.go:33 | Begin Seelog
+2023-08-03 10:07:11 [INF] config.go:33 | Begin Seelog
+2023-08-03 10:07:11 [INF] config.go:47 | create table users
+2023-08-03 10:09:08 [INF] config.go:33 | Begin Seelog
+2023-08-03 10:09:56 [INF] config.go:33 | Begin Seelog
+2023-08-03 10:18:28 [INF] config.go:33 | Begin Seelog
+2023-08-03 10:59:18 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:05:45 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:07:43 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:14:00 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:19:01 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:23:46 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:23:53 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:24:47 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:25:20 [INF] config.go:33 | Begin Seelog
+2023-08-03 11:26:21 [INF] config.go:33 | Begin Seelog
+2023-08-03 14:43:53 [INF] config.go:33 | Begin Seelog
+2023-08-03 14:52:54 [INF] config.go:33 | Begin Seelog
+2023-08-03 14:55:54 [INF] config.go:33 | Begin Seelog
+2023-08-03 15:03:41 [INF] config.go:33 | Begin Seelog
+2023-08-03 15:18:02 [INF] config.go:33 | Begin Seelog
+2023-08-03 15:19:53 [INF] config.go:33 | Begin Seelog
+2023-08-03 15:21:43 [INF] config.go:33 | Begin Seelog
+2023-08-03 15:24:00 [INF] config.go:33 | Begin Seelog
+2024-01-11 00:35:14 [INF] config.go:33 | Begin Seelog
+2024-01-11 15:10:24 [INF] config.go:34 | Begin Seelog
+2024-01-11 15:10:24 [INF] config.go:48 | create table users
+2024-01-11 15:12:11 [INF] config.go:34 | Begin Seelog
+2024-01-12 15:29:43 [INF] config.go:34 | Begin Seelog
+2024-01-12 19:28:25 [INF] config.go:34 | Begin Seelog
+2024-01-12 19:50:06 [INF] config.go:34 | Begin Seelog
+2024-01-12 21:07:49 [INF] config.go:34 | Begin Seelog
+2024-01-12 21:09:03 [INF] config.go:34 | Begin Seelog
+2024-01-12 21:13:16 [INF] config.go:34 | Begin Seelog
+2024-01-13 16:50:22 [INF] config.go:34 | Begin Seelog
+2024-01-13 18:13:14 [INF] config.go:34 | Begin Seelog
+2024-01-13 18:20:45 [INF] config.go:34 | Begin Seelog
+2024-01-13 18:31:02 [INF] config.go:34 | Begin Seelog
+2024-01-13 18:34:48 [INF] config.go:34 | Begin Seelog
+2024-01-16 18:38:19 [INF] config.go:34 | Begin Seelog
+2024-01-16 18:42:33 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:07:19 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:10:16 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:11:59 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:11:59 [INF] config.go:48 | create table users
+2024-01-16 19:15:39 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:17:54 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:20:22 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:26:32 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:27:29 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:27:29 [INF] config.go:48 | create table users
+2024-01-16 19:32:48 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:32:48 [INF] config.go:52 | recreate table users
+2024-01-16 19:35:35 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:35:35 [INF] config.go:52 | recreate table users
+2024-01-16 19:41:07 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:41:07 [INF] config.go:48 | create table users
+2024-01-16 19:42:35 [INF] config.go:34 | Begin Seelog
+2024-01-16 19:42:35 [INF] config.go:52 | recreate table users
+2024-01-16 20:00:23 [INF] config.go:34 | Begin Seelog
+2024-01-16 20:00:23 [INF] config.go:52 | recreate table users
+2024-01-16 21:37:33 [INF] config.go:34 | Begin Seelog
+2024-01-16 21:37:33 [INF] config.go:52 | recreate table users
+2024-01-16 21:42:13 [INF] config.go:34 | Begin Seelog
+2024-01-16 21:42:13 [INF] config.go:52 | recreate table users
+2024-01-17 16:10:52 [INF] config.go:34 | Begin Seelog
+2024-01-17 16:10:52 [INF] config.go:52 | recreate table users
+2024-01-17 17:51:02 [INF] config.go:34 | Begin Seelog
+2024-01-17 17:51:02 [INF] config.go:52 | recreate table users
+2024-01-17 17:57:29 [INF] config.go:34 | Begin Seelog
+2024-01-17 17:57:29 [INF] config.go:52 | recreate table users
+2024-01-17 18:00:09 [INF] config.go:34 | Begin Seelog
+2024-01-17 18:00:09 [INF] config.go:52 | recreate table users
+2024-01-17 18:00:43 [INF] config.go:34 | Begin Seelog
+2024-01-17 18:00:43 [INF] config.go:52 | recreate table users
+2024-01-17 18:02:04 [INF] config.go:34 | Begin Seelog
+2024-01-17 18:02:04 [INF] config.go:52 | recreate table users
+2024-01-17 18:10:37 [INF] config.go:34 | Begin Seelog
+2024-01-17 18:10:37 [INF] config.go:52 | recreate table users
+2024-01-17 18:11:19 [INF] config.go:34 | Begin Seelog
+2024-01-17 18:11:19 [INF] config.go:52 | recreate table users
+2024-01-20 19:10:57 [INF] config.go:43 | Begin Seelog
+2024-01-20 19:10:57 [INF] config.go:61 | recreate table users
+2024-01-20 19:20:09 [INF] config.go:43 | Begin Seelog
+2024-01-20 19:20:09 [INF] config.go:61 | recreate table users
+2024-01-22 15:14:24 [INF] config.go:43 | Begin Seelog
+2024-01-22 15:14:24 [INF] config.go:61 | recreate table users
+2024-01-22 16:20:20 [INF] config.go:43 | Begin Seelog
+2024-01-22 16:20:20 [INF] config.go:61 | recreate table users
