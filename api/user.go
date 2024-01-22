@@ -4,7 +4,6 @@ import (
 	"gin_exercise/controller"
 	"gin_exercise/dao"
 	"gin_exercise/jwtauth"
-	"gin_exercise/service"
 
 	"github.com/gin-gonic/gin"
 )
@@ -68,9 +67,6 @@ func UsersigninHandler(g *gin.Context) {
 			"username": user1.Username,
 		})
 	}
-	res := service.LoginDTO{}
-	res.Name = user1.Username
-	res.Token = tokenString
 	g.Set("name", user1.Username)
 	g.JSON(200, gin.H{
 		"code":  0,

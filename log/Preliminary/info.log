@@ -97,3 +97,7 @@
 2024-01-22 15:14:24 [INF] config.go:61 | recreate table users
 2024-01-22 16:20:20 [INF] config.go:43 | Begin Seelog
 2024-01-22 16:20:20 [INF] config.go:61 | recreate table users
+2024-01-22 17:19:31 [INF] config.go:43 | Begin Seelog
+2024-01-22 17:19:31 [INF] config.go:61 | recreate table users
+2024-01-22 17:19:55 [INF] config.go:43 | Begin Seelog
+2024-01-22 17:19:55 [INF] config.go:61 | recreate table users
