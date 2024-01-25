@@ -3,15 +3,16 @@ package main
 import (
 	"gin_exercise/config"
 	"gin_exercise/httpserver"
-	"github.com/cihub/seelog"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/cihub/seelog"
 )
 
 func Init() {
 	config.Initlog()
-	config.Initdatabase()
+	config.InitUserdatabase()
 	httpserver.Initroute()
 }
 

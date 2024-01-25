@@ -1,0 +1,12 @@
+2024-01-25 19:11:49 [ERR] user.go:114 | Error 1049 (42000): Unknown database 'xxx'
+2024-01-25 19:12:16 [ERR] user.go:114 | Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-25 19:14:33 [ERR] user.go:114 | Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-25 19:14:42 [ERR] user.go:114 | Error 1049 (42000): Unknown database '12121212'
+2024-01-25 19:16:25 [ERR] user.go:114 | Error 1049 (42000): Unknown database '12121212'
+2024-01-25 19:18:58 [ERR] user.go:114 | Error 1049 (42000): Unknown database 'userinfos'
+2024-01-25 19:19:02 [ERR] user.go:114 | Error 1049 (42000): Unknown database 'userinfos'
+2024-01-25 19:19:05 [ERR] user.go:114 | Error 1049 (42000): Unknown database 'userinfos'
+2024-01-25 19:19:37 [ERR] user.go:114 | Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-25 19:19:45 [ERR] user.go:114 | Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-25 19:19:57 [ERR] user.go:114 | Error 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2024-01-25 19:20:02 [ERR] user.go:114 | Error 1049 (42000): Unknown database '123'

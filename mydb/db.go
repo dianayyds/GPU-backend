@@ -2,4 +2,6 @@ package mydb
 
 import "gorm.io/gorm"
 
-var DB *gorm.DB
+var UserDB *gorm.DB
+
+var InfoDB *gorm.DB

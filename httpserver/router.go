@@ -27,10 +27,11 @@ func Initroute() {
 	r.Use(middleware.RateLimitMiddleware(time.Second, 100, 100)) //初始100，每秒放出100
 	v1 := r.Group("/v1")
 	{
-		v1.GET("/sign_up", api.UsersignupHandler)
-		v1.GET("/sign_in", api.UsersigninHandler)
-		v1.GET("/parse_jwt", api.ParseJwtHandler)
-		v1.GET("/cpu_info", api.CpuinfoHandler)
+		v1.POST("/sign_up", api.UsersignupHandler)
+		v1.POST("/sign_in", api.UsersigninHandler)
+		v1.POST("/parse_jwt", api.ParseJwtHandler)
+		v1.POST("/init_database", api.InitdatabaseHandler)
+		v1.POST("/cpu_info", api.CpuinfoHandler)
 	}
 	r.Run()
 }
