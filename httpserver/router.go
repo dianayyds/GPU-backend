@@ -31,7 +31,7 @@ func Initroute() {
 		v1.POST("/sign_in", api.UsersigninHandler)
 		v1.POST("/parse_jwt", api.ParseJwtHandler)
 		v1.POST("/init_database", api.InitdatabaseHandler)
-		v1.POST("/cpu_info", api.CpuinfoHandler)
+		v1.GET("/cpu_info", api.CpuinfoHandler)
 	}
 	r.Run()
 }

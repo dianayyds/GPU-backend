@@ -9,7 +9,14 @@ import (
 )
 
 func CpuinfoHandler(g *gin.Context) {
-	client := connect()
+	client, err := connect()
+	if err != nil {
+		g.JSON(200, gin.H{
+			"code":  2,
+			"error": err,
+		})
+		return 
+	}
 	defer client.Close()
 	cpuUsage, err := runCommand(client, "top -bn1 | grep '^%Cpu' | awk '{print $2}'")
 	if err != nil {
@@ -25,7 +32,7 @@ func CpuinfoHandler(g *gin.Context) {
 	})
 }
 
-func connect() *ssh.Client {
+func connect() (*ssh.Client, error) {
 	//从config获取信息
 	var host = config.GlobalConfig.Host
 	var port = config.GlobalConfig.Port
@@ -41,8 +48,10 @@ func connect() *ssh.Client {
 	client, err := ssh.Dial("tcp", host+":"+port, config)
 	if err != nil {
 		log.Fatalf("Failed to dial: %s", err)
+		return nil, err
+	} else {
+		return client, nil
 	}
-	return client
 
 }
 
