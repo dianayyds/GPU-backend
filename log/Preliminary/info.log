@@ -145,3 +145,9 @@
 2024-01-29 16:33:41 [INF] config.go:61 | recreate table users
 2024-02-21 09:45:22 [INF] config.go:43 | Begin Seelog
 2024-02-21 09:45:23 [INF] config.go:61 | recreate table users
+2024-02-21 10:15:28 [INF] config.go:43 | Begin Seelog
+2024-02-21 10:15:28 [INF] config.go:59 | table users already exists
+2024-02-21 10:33:59 [INF] config.go:43 | Begin Seelog
+2024-02-21 10:33:59 [INF] config.go:59 | table users already exists
+2024-02-21 10:38:59 [INF] config.go:43 | Begin Seelog
+2024-02-21 10:38:59 [INF] config.go:59 | table users already exists

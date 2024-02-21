@@ -134,8 +134,7 @@ func UsersInfoHandler(g *gin.Context) {
 	} else {
 		g.JSON(200, gin.H{
 			"code": 0,
-			"msg":  users,
+			"users":  users,
 		})
 	}
-
 }

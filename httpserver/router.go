@@ -32,6 +32,8 @@ func Initroute() {
 		v1.POST("/parse_jwt", api.ParseJwtHandler)
 		v1.POST("/init_database", api.InitdatabaseHandler)
 		v1.GET("/cpu_info", api.CpuinfoHandler)
+		v1.GET("/users_info", api.UsersInfoHandler)
+
 	}
 	r.Run()
 }

@@ -11,9 +11,9 @@ import (
 func CpuinfoHandler(g *gin.Context) {
 	client, err := connect()
 	if err != nil {
-		g.JSON(200, gin.H{
+		g.JSON(500, gin.H{
 			"code":  2,
-			"error": err,
+			"error":"Failed to connect to SSH server: " + err.Error(),
 		})
 		return 
 	}
