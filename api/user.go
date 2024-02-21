@@ -123,3 +123,19 @@ func InitdatabaseHandler(g *gin.Context) {
 	}
 
 }
+
+func UsersInfoHandler(g *gin.Context) {
+	users, err := dao.Allusers()
+	if err != nil {
+		g.JSON(200, gin.H{
+			"code": 1,
+			"msg":  err,
+		})
+	} else {
+		g.JSON(200, gin.H{
+			"code": 0,
+			"msg":  users,
+		})
+	}
+
+}

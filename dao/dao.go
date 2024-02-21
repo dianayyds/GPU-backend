@@ -35,6 +35,11 @@ func GetUserList(pagenum int, pagesize int) (*[]controller.User, int64, error) {
 	query.Count(&total)
 	result := query.Find(&users)
 	//result := query.Limit(pagesize).Offset((pagenum - 1) * pagesize).Find(&users)
-
 	return &users, total, result.Error
+}
+
+func Allusers() (*[]controller.User, error) {
+	var users = make([]controller.User, 0)
+	result := mydb.UserDB.Find(&users)
+	return &users, result.Error
 }
