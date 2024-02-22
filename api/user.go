@@ -81,6 +81,17 @@ func UsersigninHandler(g *gin.Context) {
 	})
 }
 
+func UserinfobynameHandler(g *gin.Context) {
+	username := g.Query("username")
+	user, _ := dao.Userinfobyname(username)
+	g.JSON(200, gin.H{
+		"code": 0,
+		"msg":  "find user success",
+		"user": user,
+	})
+
+}
+
 func ParseJwtHandler(g *gin.Context) {
 	token := controller.Mytoken{}
 	g.Bind(&token)
@@ -104,11 +115,12 @@ func IndexHandler(g *gin.Context) {
 }
 
 func InitdatabaseHandler(g *gin.Context) {
-	database := controller.Database{}
+	database := controller.User{}
 	g.Bind(&database)
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
-		database.Username, database.Password, database.Ip, database.Port, database.DatabaseName)
+		database.DatabaseUsername, database.DatabasePassword, database.Ip, database.Port, database.DatabaseName)
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
+	mydb.UserDB.Model(&controller.User{}).Where("username=?", database.Username).Updates(database)
 	if err != nil {
 		seelog.Error(err)
 		g.JSON(200, gin.H{
@@ -121,7 +133,6 @@ func InitdatabaseHandler(g *gin.Context) {
 			"code": 0,
 		})
 	}
-
 }
 
 func UsersInfoHandler(g *gin.Context) {
@@ -133,8 +144,8 @@ func UsersInfoHandler(g *gin.Context) {
 		})
 	} else {
 		g.JSON(200, gin.H{
-			"code": 0,
-			"users":  users,
+			"code":  0,
+			"users": users,
 		})
 	}
 }
@@ -151,7 +162,7 @@ func DeleteUserHandler(g *gin.Context) {
 	} else {
 		g.JSON(200, gin.H{
 			"code": 0,
-			"msg":"delete success",	
+			"msg":  "delete success",
 		})
 	}
 }

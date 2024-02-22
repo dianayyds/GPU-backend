@@ -12,7 +12,6 @@ type MyClaims struct {
 	jwt.StandardClaims
 }
 
-
 const TokenExpireDuration = time.Hour * 24 //设置过期时间
 
 var Secret = []byte("secret") //密码自行设定
