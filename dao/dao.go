@@ -33,3 +33,8 @@ func Allusers() (*[]controller.User, error) {
 	result := mydb.UserDB.Find(&users)
 	return &users, result.Error
 }
+
+func Deleteuser(name string) error {
+	result := mydb.UserDB.Where("username=?", name).Delete(&controller.User{})
+	return result.Error
+}

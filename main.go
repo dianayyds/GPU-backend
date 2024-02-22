@@ -13,6 +13,7 @@ import (
 func Init() {
 	config.Initlog()
 	config.InitUserdatabase()
+	config.InitSshConnect()
 	httpserver.Initroute()
 }
 

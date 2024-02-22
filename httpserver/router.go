@@ -33,6 +33,7 @@ func Initroute() {
 		v1.POST("/init_database", api.InitdatabaseHandler)
 		v1.GET("/cpu_info", api.CpuinfoHandler)
 		v1.GET("/users_info", api.UsersInfoHandler)
+		v1.POST("/delete_user", api.DeleteUserHandler)
 
 	}
 	r.Run()

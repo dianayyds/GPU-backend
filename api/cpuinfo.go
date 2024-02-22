@@ -9,15 +9,7 @@ import (
 )
 
 func CpuinfoHandler(g *gin.Context) {
-	client, err := connect()
-	if err != nil {
-		g.JSON(500, gin.H{
-			"code":  2,
-			"error":"Failed to connect to SSH server: " + err.Error(),
-		})
-		return 
-	}
-	defer client.Close()
+	client:= config.SshConnect
 	cpuUsage, err := runCommand(client, "top -bn1 | grep '^%Cpu' | awk '{print $2}'")
 	if err != nil {
 		log.Fatalf("Failed to run cpu usage command: %s", err)
@@ -32,28 +24,6 @@ func CpuinfoHandler(g *gin.Context) {
 	})
 }
 
-func connect() (*ssh.Client, error) {
-	//从config获取信息
-	var host = config.GlobalConfig.Host
-	var port = config.GlobalConfig.Port
-	var user = config.GlobalConfig.User
-	var password = config.GlobalConfig.Password
-	config := &ssh.ClientConfig{
-		User: user,
-		Auth: []ssh.AuthMethod{
-			ssh.Password(password),
-		},
-		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
-	}
-	client, err := ssh.Dial("tcp", host+":"+port, config)
-	if err != nil {
-		log.Fatalf("Failed to dial: %s", err)
-		return nil, err
-	} else {
-		return client, nil
-	}
-
-}
 
 func runCommand(client *ssh.Client, cmd string) (string, error) {
 	session, err := client.NewSession()

@@ -138,3 +138,20 @@ func UsersInfoHandler(g *gin.Context) {
 		})
 	}
 }
+
+func DeleteUserHandler(g *gin.Context) {
+	user := controller.User{}
+	g.Bind(&user)
+	err := dao.Deleteuser(user.Username)
+	if err != nil {
+		g.JSON(200, gin.H{
+			"code": 1,
+			"msg":  err,
+		})
+	} else {
+		g.JSON(200, gin.H{
+			"code": 0,
+			"msg":"delete success",	
+		})
+	}
+}
