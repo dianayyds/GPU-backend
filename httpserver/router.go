@@ -34,8 +34,8 @@ func Initroute() {
 		v1.GET("/cpu_info", api.CpuinfoHandler)
 		v1.GET("/users_info", api.UsersInfoHandler)
 		v1.GET("/user_info_byname", api.UserinfobynameHandler)
+		v1.GET("/base_info", api.BaseinfoHandler)
 		v1.POST("/delete_user", api.DeleteUserHandler)
-		
 
 	}
 	r.Run()

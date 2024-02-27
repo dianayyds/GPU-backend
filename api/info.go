@@ -70,7 +70,64 @@ func CpuinfoHandler(g *gin.Context) {
 		"code":        0,
 		"userUsage":   userUsage,
 		"systemUsage": systemUsage,
-		"idleUsage":        idle,
+		"idleUsage":   idle,
+	})
+}
+
+func BaseinfoHandler(g *gin.Context) {
+	client := config.SshConnect
+	// 获取uname信息
+	unameCommand := "uname -a"
+	unameOutput, err := runCommand(client, unameCommand)
+	if err != nil {
+		log.Printf("Failed to run uname command: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": err.Error(),
+		})
+		return
+	}
+	// 获取lsb_release信息
+	lsbReleaseCommand := "lsb_release -a"
+	lsbReleaseOutput, err := runCommand(client, lsbReleaseCommand)
+	if err != nil {
+		log.Printf("Failed to run lsb_release command: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": err.Error(),
+		})
+		return
+	}
+	// 解析uname输出
+	unameParts := strings.Fields(unameOutput)
+	if len(unameParts) < 6 {
+		log.Printf("Unexpected format of uname data: %s", unameOutput)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": "unexpected format of uname data",
+		})
+		return
+	}
+	// 解析lsb_release输出
+	lsbReleaseLines := strings.Split(lsbReleaseOutput, "\n")
+	lsbReleaseMap := make(map[string]string)
+	for _, line := range lsbReleaseLines {
+		if strings.Contains(line, ":") {
+			parts := strings.SplitN(line, ":", 2)
+			if len(parts) == 2 {
+				lsbReleaseMap[strings.TrimSpace(parts[0])] = strings.TrimSpace(parts[1])
+			}
+		}
+	}
+	// 构造并返回前端所需的数据
+	g.JSON(200, gin.H{
+		"code":            0,
+		"operatingSystem": unameParts[0],                                              // 操作系统
+		"hostname":        unameParts[1],                                              // 网络节点主机名
+		"kernelVersion":   unameParts[2],                                              // 内核版本
+		"cpuArchitecture": unameParts[len(unameParts)-2],                              // CPU架构
+		"release":         lsbReleaseMap["Distributor ID"] + lsbReleaseMap["Release"], // 发行版版本
+		"host":            config.GlobalConfig.Host,
 	})
 }
 
