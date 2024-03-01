@@ -6,6 +6,7 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/cihub/seelog"
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/ssh"
 )
@@ -71,6 +72,47 @@ func CpuinfoHandler(g *gin.Context) {
 		"userUsage":   userUsage,
 		"systemUsage": systemUsage,
 		"idleUsage":   idle,
+	})
+}
+
+func GpuinfoHandler(g *gin.Context) {
+	client := config.SshConnect
+	// 使用nvidia-smi命令获取温度(Temp)，功率使用(Pwr:Usage)和GPU利用率(GPU-Util)的信息
+	// 这个命令的输出需要根据实际输出进行适配调整
+	command := `nvidia-smi --query-gpu=temperature.gpu,utilization.gpu,power.draw --format=csv,noheader,nounits`
+	gpuInfo, err := runCommand(client, command)
+	if err != nil {
+		seelog.Error("Failed to run GPU info command: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": err.Error(),
+		})
+		return
+	}
+	// 假设gpuInfo的格式为"70, 30, 160\n65, 40, 150"，每行代表一个GPU的温度，使用率，功率使用量
+	// 分割gpuInfo字符串以获取单独的GPU信息
+	infoLines := strings.Split(strings.TrimSpace(gpuInfo), "\n")
+	gpus := make([]gin.H, len(infoLines))
+	for i, line := range infoLines {
+		parts := strings.Split(line, ", ")
+		if len(parts) < 3 {
+			seelog.Error("Unexpected format of GPU info data: %s", line)
+			continue
+		}
+		// 将字符串值转换为浮点数
+		temp, _ := strconv.ParseFloat(parts[0], 64)
+		utilization, _ := strconv.ParseFloat(parts[1], 64)
+		powerDraw, _ := strconv.ParseFloat(parts[2], 64)
+		gpus[i] = gin.H{
+			"temperature": temp,
+			"utilization": utilization,
+			"powerDraw":   powerDraw,
+		}
+	}
+	// 返回JSON数据，包括每个GPU的温度、使用率和功率使用量
+	g.JSON(200, gin.H{
+		"code": 0,
+		"gpus": gpus,
 	})
 }
 

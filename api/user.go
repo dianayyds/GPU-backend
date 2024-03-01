@@ -89,7 +89,6 @@ func UserinfobynameHandler(g *gin.Context) {
 		"msg":  "find user success",
 		"user": user,
 	})
-
 }
 
 func ParseJwtHandler(g *gin.Context) {
@@ -97,9 +96,10 @@ func ParseJwtHandler(g *gin.Context) {
 	g.Bind(&token)
 	claims, err := jwtauth.ParseToken(token.Token)
 	if err != nil {
+		seelog.Error("ParseJwtHandler ", err)
 		g.JSON(200, gin.H{
 			"code":  1,
-			"error": err,
+			"error": err.Error(),
 		})
 	} else {
 		g.JSON(200, gin.H{
@@ -107,7 +107,6 @@ func ParseJwtHandler(g *gin.Context) {
 			"claims": claims,
 		})
 	}
-
 }
 
 func IndexHandler(g *gin.Context) {
