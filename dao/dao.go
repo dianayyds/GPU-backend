@@ -5,6 +5,8 @@ import (
 	"encoding/hex"
 	"gin_exercise/controller"
 	"gin_exercise/mydb"
+
+	"golang.org/x/crypto/ssh"
 )
 
 func Sha1password(str string) string {
@@ -37,4 +39,18 @@ func Allusers() (*[]controller.User, error) {
 func Deleteuser(name string) error {
 	result := mydb.UserDB.Where("username=?", name).Delete(&controller.User{})
 	return result.Error
+}
+
+func RunCommand(client *ssh.Client, cmd string) (string, error) {
+	session, err := client.NewSession()
+	if err != nil {
+		return "", err
+	}
+	defer session.Close()
+
+	output, err := session.CombinedOutput(cmd)
+	if err != nil {
+		return "", err
+	}
+	return string(output), nil
 }

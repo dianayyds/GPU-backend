@@ -1,17 +1,12 @@
 package api
 
 import (
-	"fmt"
 	"gin_exercise/controller"
 	"gin_exercise/dao"
 	"gin_exercise/jwtauth"
-	"gin_exercise/mydb"
 
 	"github.com/cihub/seelog"
 	"github.com/gin-gonic/gin"
-	"gorm.io/driver/mysql"
-	"gorm.io/gorm"
-	"gorm.io/gorm/logger"
 )
 
 func UsersignupHandler(g *gin.Context) {
@@ -113,26 +108,26 @@ func IndexHandler(g *gin.Context) {
 	g.HTML(200, "index.html", nil)
 }
 
-func InitdatabaseHandler(g *gin.Context) {
-	database := controller.User{}
-	g.Bind(&database)
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
-		database.DatabaseUsername, database.DatabasePassword, database.Ip, database.Port, database.DatabaseName)
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
-	mydb.UserDB.Model(&controller.User{}).Where("username=?", database.Username).Updates(database)
-	if err != nil {
-		seelog.Error(err)
-		g.JSON(200, gin.H{
-			"code": 1,
-			"msg":  err,
-		})
-	} else {
-		mydb.InfoDB = db
-		g.JSON(200, gin.H{
-			"code": 0,
-		})
-	}
-}
+// func InitdatabaseHandler(g *gin.Context) {
+// 	database := controller.User{}
+// 	g.Bind(&database)
+// 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
+// 		database.DatabaseUsername, database.DatabasePassword, database.Ip, database.Port, database.DatabaseName)
+// 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
+// 	mydb.UserDB.Model(&controller.User{}).Where("username=?", database.Username).Updates(database)
+// 	if err != nil {
+// 		seelog.Error(err)
+// 		g.JSON(200, gin.H{
+// 			"code": 1,
+// 			"msg":  err,
+// 		})
+// 	} else {
+// 		mydb.InfoDB = db
+// 		g.JSON(200, gin.H{
+// 			"code": 0,
+// 		})
+// 	}
+// }
 
 func UsersInfoHandler(g *gin.Context) {
 	users, err := dao.Allusers()

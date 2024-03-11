@@ -2,6 +2,7 @@ package api
 
 import (
 	"gin_exercise/config"
+	"gin_exercise/dao"
 	"log"
 	"strconv"
 	"strings"
@@ -11,13 +12,15 @@ import (
 	"golang.org/x/crypto/ssh"
 )
 
+var SshConnect *ssh.Client
+
 func CpuinfoHandler(g *gin.Context) {
-	client := config.SshConnect
+	client := SshConnect
 	// 修改了原始命令，以提取用户空间使用(us)、系统空间使用(sy)和CPU空闲(id)的值
 	command := "top -bn1 | grep '^%Cpu' | awk '{print $2, $4, $8}'"
-	cpuUsage, err := runCommand(client, command)
+	cpuUsage, err := dao.RunCommand(client, command)
 	if err != nil {
-		log.Printf("Failed to run cpu usage command: %s", err) // 使用Printf代替Fatalf，避免因错误而终止服务
+		seelog.Info("Failed to run cpu usage command: %s", err) // 使用Printf代替Fatalf，避免因错误而终止服务
 		g.JSON(200, gin.H{
 			"code":  1,
 			"error": err.Error(), // 确保错误被适当地转换成字符串
@@ -29,7 +32,7 @@ func CpuinfoHandler(g *gin.Context) {
 	// 分割cpuUsage字符串以获取单独的值
 	usageParts := strings.Fields(cpuUsage)
 	if len(usageParts) < 3 {
-		log.Printf("Unexpected format of cpu usage data: %s", cpuUsage)
+		seelog.Info("Unexpected format of cpu usage data: %s", cpuUsage)
 		g.JSON(200, gin.H{
 			"code":  1,
 			"error": "unexpected format of cpu usage data",
@@ -75,12 +78,51 @@ func CpuinfoHandler(g *gin.Context) {
 	})
 }
 
+func DetailedGPUInfoHandler(g *gin.Context) {
+	client := SshConnect
+	// 修改命令以获取型号名称，唯一标识符，总内存大小，NVIDIA 驱动版本，电源使用限制
+	command := `nvidia-smi --query-gpu=name,uuid,memory.total,driver_version,power.limit --format=csv,noheader,nounits`
+	gpuInfo, err := dao.RunCommand(client, command)
+	if err != nil {
+		seelog.Error("Failed to run detailed GPU info command: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": err.Error(),
+		})
+		return
+	}
+	infoLines := strings.Split(strings.TrimSpace(gpuInfo), "\n")
+	gpus := make([]gin.H, len(infoLines))
+	for i, line := range infoLines {
+		parts := strings.Split(line, ", ")
+		if len(parts) < 5 {
+			seelog.Error("Unexpected format of detailed GPU info data: %s", line)
+			continue
+		}
+		// 由于内存和电源限制已经是以正确的单位返回，这里不需要转换
+		memoryTotal, _ := strconv.ParseInt(parts[2], 10, 64)
+		powerLimit, _ := strconv.ParseFloat(parts[4], 64)
+		gpus[i] = gin.H{
+			"modelName":     parts[0],
+			"uuid":          parts[1],
+			"memoryTotalMB": memoryTotal,
+			"driverVersion": parts[3],
+			"powerLimitW":   powerLimit,
+		}
+	}
+	// 返回JSON数据，包括每个GPU的型号名称，唯一标识符，总内存大小，驱动版本和电源使用限制
+	g.JSON(200, gin.H{
+		"code": 0,
+		"gpus": gpus,
+	})
+}
+
 func GpuinfoHandler(g *gin.Context) {
-	client := config.SshConnect
+	client := SshConnect
 	// 使用nvidia-smi命令获取温度(Temp)，功率使用(Pwr:Usage)和GPU利用率(GPU-Util)的信息
 	// 这个命令的输出需要根据实际输出进行适配调整
 	command := `nvidia-smi --query-gpu=temperature.gpu,utilization.gpu,power.draw --format=csv,noheader,nounits`
-	gpuInfo, err := runCommand(client, command)
+	gpuInfo, err := dao.RunCommand(client, command)
 	if err != nil {
 		seelog.Error("Failed to run GPU info command: %s", err)
 		g.JSON(200, gin.H{
@@ -117,10 +159,10 @@ func GpuinfoHandler(g *gin.Context) {
 }
 
 func BaseinfoHandler(g *gin.Context) {
-	client := config.SshConnect
+	client := SshConnect
 	// 获取uname信息
 	unameCommand := "uname -a"
-	unameOutput, err := runCommand(client, unameCommand)
+	unameOutput, err := dao.RunCommand(client, unameCommand)
 	if err != nil {
 		log.Printf("Failed to run uname command: %s", err)
 		g.JSON(200, gin.H{
@@ -131,7 +173,7 @@ func BaseinfoHandler(g *gin.Context) {
 	}
 	// 获取lsb_release信息
 	lsbReleaseCommand := "lsb_release -a"
-	lsbReleaseOutput, err := runCommand(client, lsbReleaseCommand)
+	lsbReleaseOutput, err := dao.RunCommand(client, lsbReleaseCommand)
 	if err != nil {
 		log.Printf("Failed to run lsb_release command: %s", err)
 		g.JSON(200, gin.H{
@@ -173,16 +215,30 @@ func BaseinfoHandler(g *gin.Context) {
 	})
 }
 
-func runCommand(client *ssh.Client, cmd string) (string, error) {
-	session, err := client.NewSession()
-	if err != nil {
-		return "", err
+func SshConnectHandler(g *gin.Context) {
+	//从config获取信息
+	var host = g.Query("host")
+	var port = g.Query("port")
+	var user = g.Query("user")
+	var password = g.Query("password")
+	config := &ssh.ClientConfig{
+		User: user,
+		Auth: []ssh.AuthMethod{
+			ssh.Password(password),
+		},
+		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 	}
-	defer session.Close()
-
-	output, err := session.CombinedOutput(cmd)
+	connect, err := ssh.Dial("tcp", host+":"+port, config)
 	if err != nil {
-		return "", err
+		g.JSON(200, gin.H{
+			"code": 1,
+			"msg":  err.Error(),
+		})
+	} else {
+		SshConnect = connect
+		g.JSON(200, gin.H{
+			"code": 0,
+			"msg":  "connect success",
+		})
 	}
-	return string(output), nil
 }

@@ -30,13 +30,16 @@ func Initroute() {
 		v1.POST("/sign_up", api.UsersignupHandler)
 		v1.POST("/sign_in", api.UsersigninHandler)
 		v1.POST("/parse_jwt", api.ParseJwtHandler)
-		v1.POST("/init_database", api.InitdatabaseHandler)
+		// v1.POST("/init_database", api.InitdatabaseHandler)
+		v1.POST("/delete_user", api.DeleteUserHandler)
+		v1.POST("/gpt", api.GptHandler)
+		v1.POST("/ssh_connect", api.SshConnectHandler)
 		v1.GET("/cpu_info", api.CpuinfoHandler)
 		v1.GET("/gpu_info", api.GpuinfoHandler)
+		v1.GET("/detailed_gpu_info", api.DetailedGPUInfoHandler)
 		v1.GET("/users_info", api.UsersInfoHandler)
 		v1.GET("/user_info_byname", api.UserinfobynameHandler)
 		v1.GET("/base_info", api.BaseinfoHandler)
-		v1.POST("/delete_user", api.DeleteUserHandler)
 	}
 	r.Run()
 }

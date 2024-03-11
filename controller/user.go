@@ -1,13 +1,8 @@
 package controller
 
 type User struct {
-	Username         string
-	Password         string
-	Ip               string
-	Port             string
-	DatabaseName     string
-	DatabaseUsername string
-	DatabasePassword string
+	Username string
+	Password string
 }
 
 type Mytoken struct {

@@ -5,17 +5,14 @@ import (
 	"gin_exercise/controller"
 	"gin_exercise/help"
 	"gin_exercise/mydb"
-	"log"
 
 	"github.com/cihub/seelog"
-	"golang.org/x/crypto/ssh"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )
 
 var GlobalConfig *Config
-var SshConnect *ssh.Client
 
 type Config struct {
 	ListenPort int
@@ -60,26 +57,5 @@ func InitUserdatabase() {
 		mydb.UserDB.Migrator().CreateTable(&controller.User{}) //不存在则创建
 	} else {
 		seelog.Info(fmt.Sprintf("table users already exists"))
-	}
-}
-
-func InitSshConnect(){
-	//从config获取信息
-	var host = GlobalConfig.Host
-	var port = GlobalConfig.Port
-	var user = GlobalConfig.User
-	var password = GlobalConfig.Password
-	config := &ssh.ClientConfig{
-		User: user,
-		Auth: []ssh.AuthMethod{
-			ssh.Password(password),
-		},
-		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
-	}
-	connect, err := ssh.Dial("tcp", host+":"+port, config)
-	if err != nil {
-		log.Fatalf("Failed to dial: %s", err)
-	} else {
-		SshConnect=connect
 	}
 }
