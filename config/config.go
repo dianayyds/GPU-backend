@@ -1,16 +1,25 @@
 package config
 
 import (
+	"encoding/json"
 	"fmt"
 	"gin_exercise/controller"
 	"gin_exercise/help"
 	"gin_exercise/mydb"
+	"os"
 
 	"github.com/cihub/seelog"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )
+
+type DBConfig struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+	Address  string `json:"address"`
+	DBName   string `json:"dbname"`
+}
 
 var GlobalConfig *Config
 
@@ -42,9 +51,29 @@ func Initlog() {
 	seelog.Info(fmt.Sprintf("Begin Seelog"))
 }
 
+func LoadConfig() (map[string]interface{}, error) {
+	content, err := os.ReadFile("Usersconfig.json")
+	if err != nil {
+		seelog.Error(err)
+		// fmt.Println("read file error")
+		return nil, err
+	}
+	var payload map[string]interface{}
+	err = json.Unmarshal(content, &payload)
+	if err != nil {
+		seelog.Error(err)
+		return nil, err
+	}
+	return payload, nil
+}
+
 func InitUserdatabase() {
-	//数据库账号root 密码123456 地址127.0.0.1:3306
-	dsn := "root:123456@tcp(127.0.0.1:3306)/userInfo?charset=utf8&parseTime=True&loc=Local"
+	config, _ := LoadConfig()
+	username := config["username"].(string)
+	password := config["password"].(string)
+	address := config["address"].(string)
+	dbname := config["dbname"].(string)
+	dsn := username + ":" + password + "@tcp(" + address + ")/" + dbname + "?charset=utf8&parseTime=True&loc=Local"
 	userDB, err := gorm.Open(mysql.Open(dsn), &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		seelog.Error(err)
