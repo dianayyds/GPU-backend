@@ -7,7 +7,7 @@
 ## 如何运行(需要配合前端一起启动以及golang环境)
 **部署项目**
 ```
-https://github.com/dianayyds/GPU-backend.git
+git clone https://github.com/dianayyds/GPU-backend.git
 ```
 
 **进入项目**
