@@ -254,3 +254,7 @@
 2024-03-13 18:07:34 [INF] config.go:91 | table users already exists
 2024-03-13 18:13:22 [INF] config.go:52 | Begin Seelog
 2024-03-13 18:13:22 [INF] config.go:88 | table users already exists
+2024-03-18 08:39:58 [INF] config.go:52 | Begin Seelog
+2024-03-18 08:39:58 [INF] config.go:88 | table users already exists
+2024-03-18 09:20:43 [INF] config.go:52 | Begin Seelog
+2024-03-18 09:20:43 [INF] config.go:88 | table users already exists
