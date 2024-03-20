@@ -5,17 +5,22 @@
 <br><br><br><br>
 
 ## 如何运行(需要配合前端一起启动以及golang环境)
-**部署项目**
+**部署项目，在你的代码文件夹里，win+r输入cmd回车**
 ```
 git clone https://github.com/dianayyds/GPU-backend.git
 ```
 
-**进入项目**
+**进入gpu-backend文件**
+
+**找到Usersconfig.json并将其修改为你的mysql数据库配置，如果你不知道怎么修改，那么我教你配置,该文件就不用修改了，直接win+r输入cmd回车**
 ```
-cd GPU-backend
+mysql -u root -p
+(此处输入你的mysql密码)
+DROP DATABASE IF EXISTS userinfo;
+CREATE DATABASE userinfo;
 ```
 
-**下载依赖**
+**回到gpu-backend文件夹目录，win+r输入cmd回车，下载依赖**
 ```
 go mod tidy
 ```
