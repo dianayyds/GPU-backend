@@ -30,6 +30,18 @@ func Adduser(user *controller.User) error {
 	}
 }
 
+func Adduserssh(user *controller.Userssh) error {
+	userssh:=controller.Userssh{}
+	result := mydb.UserDB.Model(&controller.Userssh{}).Where("username=?", user.Username).Find(&userssh)
+	if result.RowsAffected > 0{
+		result = mydb.UserDB.Model(&controller.Userssh{}).Where("username=?", user.Username).Updates(user)
+		return result.Error
+	}else{
+		result = mydb.UserDB.Model(&controller.Userssh{}).Create(user)
+		return result.Error
+	}
+}
+
 func Allusers() (*[]controller.User, error) {
 	var users = make([]controller.User, 0)
 	result := mydb.UserDB.Find(&users)

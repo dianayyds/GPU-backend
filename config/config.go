@@ -87,4 +87,11 @@ func InitUserdatabase() {
 	} else {
 		seelog.Info(fmt.Sprintf("table users already exists"))
 	}
+	p = mydb.UserDB.Migrator().HasTable(&controller.Userssh{}) //检测是否存在userssh表单
+	if !p {
+		seelog.Info(fmt.Sprintf("create table userssh"))
+		mydb.UserDB.Migrator().CreateTable(&controller.Userssh{}) //不存在则创建
+	} else {
+		seelog.Info(fmt.Sprintf("table userssh already exists"))
+	}
 }

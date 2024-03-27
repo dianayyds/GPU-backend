@@ -40,14 +40,13 @@ type Usage struct {
 
 func GptHandler(g *gin.Context) {
 	start := time.Now() // 获取开始时间
-	// 将YOUR_API_KEY替换为你的OpenAI API密钥
 	text := g.Query("text")
-	//把你自己的密钥添加进去
-	apiKey := ""
+	//// 将替换为你的OpenAI API密钥
+	apiKey := "YOUR_API_KEY"
 	url := "https://api.openai.com/v1/chat/completions"
 	// 构建请求体
 	requestBody, _ := json.Marshal(map[string]interface{}{
-		"model": "gpt-3.5-turbo-0125", // 或选择其他GPT-4模型
+		"model": "gpt-3.5-turbo-0125", 
 		"messages": []map[string]interface{}{
 			{
 				"role": "user",

@@ -262,3 +262,17 @@
 2024-03-18 10:44:56 [INF] config.go:88 | table users already exists
 2024-03-19 10:00:49 [INF] config.go:52 | Begin Seelog
 2024-03-19 10:00:49 [INF] config.go:88 | table users already exists
+2024-03-20 10:19:07 [INF] config.go:52 | Begin Seelog
+2024-03-20 10:19:07 [INF] config.go:88 | table users already exists
+2024-03-20 10:50:01 [INF] config.go:52 | Begin Seelog
+2024-03-20 10:50:01 [INF] config.go:88 | table users already exists
+2024-03-20 10:50:01 [INF] config.go:93 | create table userssh
+2024-03-20 10:51:53 [INF] config.go:52 | Begin Seelog
+2024-03-20 10:51:53 [INF] config.go:88 | table users already exists
+2024-03-20 10:51:53 [INF] config.go:93 | create table userssh
+2024-03-20 11:07:07 [INF] config.go:52 | Begin Seelog
+2024-03-20 11:07:07 [INF] config.go:88 | table users already exists
+2024-03-20 11:07:07 [INF] config.go:95 | table userssh already exists
+2024-03-20 11:25:22 [INF] config.go:52 | Begin Seelog
+2024-03-20 11:25:22 [INF] config.go:88 | table users already exists
+2024-03-20 11:25:22 [INF] config.go:95 | table userssh already exists

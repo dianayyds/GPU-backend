@@ -214,31 +214,3 @@ func BaseinfoHandler(g *gin.Context) {
 		"host":            config.GlobalConfig.Host,
 	})
 }
-
-func SshConnectHandler(g *gin.Context) {
-	//从config获取信息
-	var host = g.Query("host")
-	var port = g.Query("port")
-	var user = g.Query("user")
-	var password = g.Query("password")
-	config := &ssh.ClientConfig{
-		User: user,
-		Auth: []ssh.AuthMethod{
-			ssh.Password(password),
-		},
-		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
-	}
-	connect, err := ssh.Dial("tcp", host+":"+port, config)
-	if err != nil {
-		g.JSON(200, gin.H{
-			"code": 1,
-			"msg":  err.Error(),
-		})
-	} else {
-		SshConnect = connect
-		g.JSON(200, gin.H{
-			"code": 0,
-			"msg":  "connect success",
-		})
-	}
-}
