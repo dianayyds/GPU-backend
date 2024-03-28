@@ -4,6 +4,7 @@ import (
 	"gin_exercise/config"
 	"gin_exercise/dao"
 	"log"
+	"math"
 	"strconv"
 	"strings"
 
@@ -75,6 +76,62 @@ func CpuinfoHandler(g *gin.Context) {
 		"userUsage":   userUsage,
 		"systemUsage": systemUsage,
 		"idleUsage":   idle,
+	})
+}
+
+func MemoryinfoHandler(g *gin.Context) {
+	client := SshConnect
+	// 运行命令以获取内存总量和已使用内存的值
+	command := "free -m | awk 'NR==2{print $2,$3}'"
+	memoryUsage, err := dao.RunCommand(client, command)
+	if err != nil {
+		seelog.Info("Failed to run memory usage command: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": err.Error(),
+		})
+		return
+	}
+
+	// 分割memoryUsage字符串以获取单独的值
+	usageParts := strings.Fields(memoryUsage)
+	if len(usageParts) < 2 {
+		seelog.Info("Unexpected format of memory usage data: %s", memoryUsage)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": "unexpected format of memory usage data",
+		})
+		return
+	}
+
+	// 将字符串值转换为浮点数
+	totalMemory, err := strconv.ParseFloat(usageParts[0], 64)
+	if err != nil {
+		log.Printf("Error parsing total memory to float: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": "error parsing total memory",
+		})
+		return
+	}
+	usedMemory, err := strconv.ParseFloat(usageParts[1], 64)
+	if err != nil {
+		log.Printf("Error parsing used memory to float: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": "error parsing used memory",
+		})
+		return
+	}
+
+	// 计算内存使用率
+	memoryUsageRate := (usedMemory / totalMemory) * 100
+
+	// 返回JSON数据，包括内存总量和内存使用率的值
+	g.JSON(200, gin.H{
+		"code":        0,
+		"totalMemory": totalMemory,
+		"memoryUsage": math.Round(memoryUsageRate*100) / 100,
 	})
 }
 
