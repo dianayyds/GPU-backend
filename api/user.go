@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"gin_exercise/controller"
 	"gin_exercise/dao"
 	"gin_exercise/jwtauth"
@@ -24,6 +25,7 @@ func UsersignupHandler(g *gin.Context) {
 	}
 	user1.Password = dao.Sha1password(user1.Password)
 	err := dao.Adduser(&user1)
+	seelog.Info(fmt.Sprintf("用户%s注册成功", user1.Username))
 	if err != nil {
 		g.JSON(200, gin.H{
 			"code": 2,
@@ -69,7 +71,7 @@ func UsersigninHandler(g *gin.Context) {
 			"username": user1.Username,
 		})
 	}
-	g.Set("name", user1.Username)
+	seelog.Info(fmt.Sprintf("用户%s登录成功", user1.Username))
 	g.JSON(200, gin.H{
 		"code":  0,
 		"msg":   "signin success",
@@ -124,6 +126,21 @@ func UsersInfoHandler(g *gin.Context) {
 	}
 }
 
+func SshInfoHandler(g *gin.Context) {
+	users, err := dao.AllsshInfo()
+	if err != nil {
+		g.JSON(200, gin.H{
+			"code": 1,
+			"msg":  err,
+		})
+	} else {
+		g.JSON(200, gin.H{
+			"code":    0,
+			"sshinfo": users,
+		})
+	}
+}
+
 func DeleteUserHandler(g *gin.Context) {
 	user := controller.User{}
 	g.Bind(&user)
@@ -164,6 +181,7 @@ func SshConnectHandler(g *gin.Context) {
 			"msg":  err.Error(),
 		})
 	} else {
+		seelog.Info(fmt.Sprintf("用户%s开始监测%s服务器", sshinfo.Username, sshinfo.Host))
 		SshConnect = connect
 		dao.Adduserssh(&sshinfo)
 		g.JSON(200, gin.H{

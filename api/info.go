@@ -199,6 +199,7 @@ func GpuinfoHandler(g *gin.Context) {
 			continue
 		}
 		// 将字符串值转换为浮点数
+
 		temp, _ := strconv.ParseFloat(parts[0], 64)
 		utilization, _ := strconv.ParseFloat(parts[1], 64)
 		powerDraw, _ := strconv.ParseFloat(parts[2], 64)

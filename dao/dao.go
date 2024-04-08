@@ -48,6 +48,13 @@ func Allusers() (*[]controller.User, error) {
 	return &users, result.Error
 }
 
+func AllsshInfo() (*[]controller.Userssh, error) {
+	var users = make([]controller.Userssh, 0)
+	result := mydb.UserDB.Find(&users)
+	return &users, result.Error
+}
+
+
 func Deleteuser(name string) error {
 	result := mydb.UserDB.Where("username=?", name).Delete(&controller.User{})
 	return result.Error
