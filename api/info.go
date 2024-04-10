@@ -69,9 +69,11 @@ func CpuinfoHandler(g *gin.Context) {
 		})
 		return
 	}
+	name, _ := g.Get("name")
 
 	// 返回JSON数据，包括用户空间使用、系统空间使用和CPU空闲的值
 	g.JSON(200, gin.H{
+		"name":        name,
 		"code":        0,
 		"userUsage":   userUsage,
 		"systemUsage": systemUsage,
@@ -222,7 +224,7 @@ func BaseinfoHandler(g *gin.Context) {
 	unameCommand := "uname -a"
 	unameOutput, err := dao.RunCommand(client, unameCommand)
 	if err != nil {
-		log.Printf("Failed to run uname command: %s", err)
+		seelog.Error("Failed to run uname command: %s", err)
 		g.JSON(200, gin.H{
 			"code":  1,
 			"error": err.Error(),
@@ -233,7 +235,7 @@ func BaseinfoHandler(g *gin.Context) {
 	lsbReleaseCommand := "lsb_release -a"
 	lsbReleaseOutput, err := dao.RunCommand(client, lsbReleaseCommand)
 	if err != nil {
-		log.Printf("Failed to run lsb_release command: %s", err)
+		seelog.Error("Failed to run lsb_release command: %s", err)
 		g.JSON(200, gin.H{
 			"code":  1,
 			"error": err.Error(),
@@ -243,7 +245,7 @@ func BaseinfoHandler(g *gin.Context) {
 	// 解析uname输出
 	unameParts := strings.Fields(unameOutput)
 	if len(unameParts) < 6 {
-		log.Printf("Unexpected format of uname data: %s", unameOutput)
+		seelog.Error("Unexpected format of uname data: %s", unameOutput)
 		g.JSON(200, gin.H{
 			"code":  1,
 			"error": "unexpected format of uname data",
@@ -270,5 +272,73 @@ func BaseinfoHandler(g *gin.Context) {
 		"cpuArchitecture": unameParts[len(unameParts)-2],                              // CPU架构
 		"release":         lsbReleaseMap["Distributor ID"] + lsbReleaseMap["Release"], // 发行版版本
 		"host":            config.GlobalConfig.Host,
+	})
+}
+
+func Whoinfohandler(g *gin.Context) {
+	client := SshConnect
+	// 获取当前登录用户的信息
+	command := "who"
+	whoOutput, err := dao.RunCommand(client, command)
+	if err != nil {
+		log.Printf("Failed to run who command: %s", err)
+		g.JSON(200, gin.H{
+			"code":  1,
+			"error": err.Error(),
+		})
+		return
+	}
+	// 解析who输出
+	whoLines := strings.Split(whoOutput, "\n")
+	users := make([]gin.H, 0)
+	for _, line := range whoLines {
+		parts := strings.Fields(line)
+		if len(parts) < 4 {
+			continue
+		}
+		users = append(users, gin.H{
+			"user":     parts[0],
+			"terminal": parts[1],
+			"date":     parts[2],
+			"time":     parts[3],
+		})
+	}
+	// 返回当前登录用户的信息
+	g.JSON(200, gin.H{
+		"code":  0,
+		"users": users,
+	})
+}
+
+func WinfoHandler(g *gin.Context) {
+	client := SshConnect
+	command := "cat /proc/cpuinfo| grep 'physical id'| sort| uniq| wc -l"
+	cpunum, _ := dao.RunCommand(client, command)
+	cpunum = strings.TrimSpace(cpunum)
+	cpunums, _ := strconv.Atoi(cpunum)
+
+	command = "grep -m 1 'cpu cores' /proc/cpuinfo | awk '{print $4}'"
+	cpucorenum, _ := dao.RunCommand(client, command)
+	cpucorenum = strings.TrimSpace(cpucorenum)
+	cpucorenums, _ := strconv.Atoi(cpucorenum)
+
+	command = "cat /proc/loadavg"
+	avgload, _ := dao.RunCommand(client, command)
+	avgloads := strings.Fields(avgload)
+	load1min := avgloads[0]
+	load5min := avgloads[1]
+	load15min := avgloads[2]
+
+	idealload := float64(cpunums*cpucorenums) * 0.7
+
+	// 返回JSON响应
+	g.JSON(200, gin.H{
+		"load1min":   load1min,
+		"load5min":   load5min,
+		"load15min":  load15min,
+		"cpunum":     cpunums,
+		"cpucorenum": cpucorenums,
+		"idealload":  idealload,
+		"code":       0,
 	})
 }

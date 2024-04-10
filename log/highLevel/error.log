@@ -94,3 +94,9 @@
 2024-03-29 15:53:28 [ERR] user.go:96 | ParseJwtHandler token contains an invalid number of segments
 2024-03-29 15:56:53 [ERR] user.go:96 | ParseJwtHandler token contains an invalid number of segments
 2024-03-29 15:58:24 [ERR] user.go:96 | ParseJwtHandler token contains an invalid number of segments
+2024-04-09 18:42:13 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-09 18:42:15 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-10 14:03:03 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-10 14:51:34 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-10 15:59:20 [ERR] user.go:179 | ssh connect failedssh: handshake failed: read tcp 198.18.0.2:58594->211.71.76.205:22: wsarecv: An existing connection was forcibly closed by the remote host.
+2024-04-10 15:59:20 [ERR] user.go:179 | ssh connect failedssh: handshake failed: read tcp 198.18.0.2:58597->211.71.76.205:22: wsarecv: An existing connection was forcibly closed by the remote host.

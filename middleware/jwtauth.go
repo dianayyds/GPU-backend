@@ -4,26 +4,24 @@ import (
 	"fmt"
 	"gin_exercise/dao"
 	"gin_exercise/jwtauth"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 func JWTAuthMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		token := c.Request.Header.Get("Authorization")
+		token := c.Request.Header.Get("authorization")
 		if token == "" {
-			c.JSON(http.StatusUnauthorized, gin.H{
-				"msg": "请求头中auth为空",
-			})
-			c.Abort()
-			return
+			c.Next()
 		}
 		// 按空格分割
 		parts := strings.Split(token, ".")
 		if len(parts) != 3 {
 			c.JSON(http.StatusUnauthorized, gin.H{
-				"msg": "请求头中auth格式有误",
+				"code": 1,
+				"msg":  "请求头中auth格式有误",
 			})
 			c.Abort()
 			return
@@ -32,7 +30,8 @@ func JWTAuthMiddleware() gin.HandlerFunc {
 		claim, err := jwtauth.ParseToken(token)
 		if err != nil {
 			c.JSON(http.StatusUnauthorized, gin.H{
-				"msg": "无效的Token",
+				"code": 1,
+				"msg":  "无效的Token",
 			})
 			c.Abort()
 			return
