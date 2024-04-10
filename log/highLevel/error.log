@@ -100,3 +100,6 @@
 2024-04-10 14:51:34 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
 2024-04-10 15:59:20 [ERR] user.go:179 | ssh connect failedssh: handshake failed: read tcp 198.18.0.2:58594->211.71.76.205:22: wsarecv: An existing connection was forcibly closed by the remote host.
 2024-04-10 15:59:20 [ERR] user.go:179 | ssh connect failedssh: handshake failed: read tcp 198.18.0.2:58597->211.71.76.205:22: wsarecv: An existing connection was forcibly closed by the remote host.
+2024-04-10 17:03:00 [ERR] user.go:179 | ssh connect faileddial tcp :0: connectex: The requested address is not valid in its context.
+2024-04-10 17:03:07 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-10 17:14:13 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF

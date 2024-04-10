@@ -321,6 +321,7 @@ func WinfoHandler(g *gin.Context) {
 	cpucorenum, _ := dao.RunCommand(client, command)
 	cpucorenum = strings.TrimSpace(cpucorenum)
 	cpucorenums, _ := strconv.Atoi(cpucorenum)
+	idealload := float64(cpunums*cpucorenums) * 0.7
 
 	command = "cat /proc/loadavg"
 	avgload, _ := dao.RunCommand(client, command)
@@ -329,9 +330,26 @@ func WinfoHandler(g *gin.Context) {
 	load5min := avgloads[1]
 	load15min := avgloads[2]
 
-	idealload := float64(cpunums*cpucorenums) * 0.7
+	command = "w"
+	wOutput, _ := dao.RunCommand(client, command)
+	lines := strings.Split(wOutput, "\n")
 
-	// 返回JSON响应
+	users := make([]gin.H, 0)
+	for _, line := range lines[2:] { // 从第三行开始是用户信息
+		parts := strings.Fields(line)
+		if len(parts) < 8 {
+			continue
+		}
+		userInfo := gin.H{
+			"user": parts[0],
+			"tty":  parts[1],
+			"idle": parts[4],
+			"jcpu": parts[5],                     // 用户所有进程占用的CPU时间总和
+			"what": strings.Join(parts[7:], " "), // 用户正在运行的命令
+		}
+		users = append(users, userInfo)
+	}
+
 	g.JSON(200, gin.H{
 		"load1min":   load1min,
 		"load5min":   load5min,
@@ -339,6 +357,7 @@ func WinfoHandler(g *gin.Context) {
 		"cpunum":     cpunums,
 		"cpucorenum": cpucorenums,
 		"idealload":  idealload,
+		"users":      users,
 		"code":       0,
 	})
 }
