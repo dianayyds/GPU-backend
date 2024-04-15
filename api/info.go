@@ -342,9 +342,8 @@ func WinfoHandler(g *gin.Context) {
 		}
 		userInfo := gin.H{
 			"user": parts[0],
-			"tty":  parts[1],
-			"idle": parts[4],
-			"jcpu": parts[5],                     // 用户所有进程占用的CPU时间总和
+			"from": parts[2],
+			"pcpu": parts[6],
 			"what": strings.Join(parts[7:], " "), // 用户正在运行的命令
 		}
 		users = append(users, userInfo)

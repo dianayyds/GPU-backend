@@ -450,3 +450,18 @@
 2024-04-10 17:14:18 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
 2024-04-10 17:20:32 [INF] user.go:75 | 用户yinchenxu登录成功
 2024-04-10 17:20:35 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-10 17:41:46 [INF] config.go:52 | Begin Seelog
+2024-04-10 17:41:46 [INF] config.go:88 | table users already exists
+2024-04-10 17:41:46 [INF] config.go:95 | table userssh already exists
+2024-04-10 17:43:11 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-10 17:43:13 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-10 17:45:02 [INF] config.go:52 | Begin Seelog
+2024-04-10 17:45:02 [INF] config.go:88 | table users already exists
+2024-04-10 17:45:02 [INF] config.go:95 | table userssh already exists
+2024-04-10 17:45:18 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-10 17:45:21 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-10 17:46:57 [INF] config.go:52 | Begin Seelog
+2024-04-10 17:46:57 [INF] config.go:88 | table users already exists
+2024-04-10 17:46:57 [INF] config.go:95 | table userssh already exists
+2024-04-10 17:47:09 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-10 17:47:11 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
