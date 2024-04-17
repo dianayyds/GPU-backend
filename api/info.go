@@ -2,6 +2,7 @@ package api
 
 import (
 	"gin_exercise/config"
+	"gin_exercise/controller"
 	"gin_exercise/dao"
 	"log"
 	"math"
@@ -245,7 +246,7 @@ func BaseinfoHandler(g *gin.Context) {
 	// 解析uname输出
 	unameParts := strings.Fields(unameOutput)
 	if len(unameParts) < 6 {
-		seelog.Error("Unexpected format of uname data: %s", unameOutput)
+		seelog.Error("Unexpected format of uname data: ", unameOutput)
 		g.JSON(200, gin.H{
 			"code":  1,
 			"error": "unexpected format of uname data",
@@ -311,6 +312,7 @@ func Whoinfohandler(g *gin.Context) {
 }
 
 func WinfoHandler(g *gin.Context) {
+
 	client := SshConnect
 	command := "cat /proc/cpuinfo| grep 'physical id'| sort| uniq| wc -l"
 	cpunum, _ := dao.RunCommand(client, command)
@@ -359,4 +361,40 @@ func WinfoHandler(g *gin.Context) {
 		"users":      users,
 		"code":       0,
 	})
+}
+
+func LstmHandler(g *gin.Context) {
+	requestData :=controller.RequestData{}
+	g.Bind(&requestData)
+	seelog.Info("data:", requestData)
+	g.JSON(200, gin.H{
+		"code":   0,
+		"output": requestData.Data,
+	})
+	
+	// client := SshConnect
+	// command := "cd project && /home/ycx/anaconda3/envs/pytorch/bin/python /home/ycx/project/remote.py"
+	// session, _ := client.NewSession()
+
+	// defer session.Close()
+
+	// // 创建一个stdin管道用来发送数据到远程Python脚本
+	// stdin, _ := session.StdinPipe()
+
+	// // 从远程Python脚本接收输出
+	// var b bytes.Buffer
+	// session.Stdout = &b
+
+	// // 运行远程Python脚本
+	// session.Start(command)
+
+	// // 向Python脚本发送数据
+	// fmt.Fprintln(stdin, data)
+	// stdin.Close()
+
+	// // 等待脚本执行结束
+	// session.Wait()
+
+	
+
 }

@@ -103,3 +103,14 @@
 2024-04-10 17:03:00 [ERR] user.go:179 | ssh connect faileddial tcp :0: connectex: The requested address is not valid in its context.
 2024-04-10 17:03:07 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
 2024-04-10 17:14:13 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-15 14:14:27 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-15 14:59:56 [ERR] info.go:370 | Failed to run command: %sProcess exited with status 1
+2024-04-15 15:00:03 [ERR] info.go:370 | Failed to run command: %sProcess exited with status 1
+2024-04-15 15:04:27 [ERR] info.go:372 | Failed to run command: Process exited with status 1
+2024-04-15 15:04:33 [ERR] info.go:372 | Failed to run command: Process exited with status 1
+2024-04-16 15:41:59 [ERR] info.go:370 | Failed to run command: Process exited with status 1
+2024-04-16 16:20:20 [ERR] info.go:370 | Failed to run command: Process exited with status 1
+2024-04-16 16:20:26 [ERR] info.go:370 | Failed to run command: Process exited with status 1
+2024-04-16 17:01:35 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-16 17:10:51 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
+2024-04-16 17:30:31 [ERR] user.go:179 | ssh connect failedssh: handshake failed: EOF
