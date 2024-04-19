@@ -572,3 +572,164 @@
 2024-04-17 16:12:10 [INF] user.go:75 | 用户yinchenxu登录成功
 2024-04-17 16:12:12 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
 2024-04-17 16:12:31 [INF] info.go:370 | data:{[]}
+2024-04-17 16:24:16 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:24:16 [INF] config.go:88 | table users already exists
+2024-04-17 16:24:16 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:24:44 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:24:51 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:25:21 [INF] info.go:370 | data:{[]}
+2024-04-17 16:26:08 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:26:08 [INF] config.go:88 | table users already exists
+2024-04-17 16:26:08 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:26:20 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:26:23 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:26:43 [INF] info.go:370 | data:{[]}
+2024-04-17 16:32:01 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:32:01 [INF] config.go:88 | table users already exists
+2024-04-17 16:32:01 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:32:33 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:32:33 [INF] config.go:88 | table users already exists
+2024-04-17 16:32:33 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:32:44 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:32:46 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:07 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:09 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:09 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:11 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:11 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:13 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:13 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:15 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:15 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:17 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:17 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:19 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:19 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:21 [INF] info.go:26 | Failed to run cpu usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:21 [INF] info.go:92 | Failed to run memory usage command: %sread tcp 10.60.218.243:62220->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-17 16:33:28 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:33:30 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:33:51 [INF] info.go:370 | data:{[] 100}
+2024-04-17 16:34:29 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:34:29 [INF] config.go:88 | table users already exists
+2024-04-17 16:34:29 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:34:38 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:34:40 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:35:00 [INF] info.go:370 | data:{[] <nil>}
+2024-04-17 16:42:01 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:42:01 [INF] config.go:88 | table users already exists
+2024-04-17 16:42:01 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:42:43 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:42:45 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:43:05 [INF] info.go:370 | data:{[] 0}
+2024-04-17 16:45:41 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:45:41 [INF] config.go:88 | table users already exists
+2024-04-17 16:45:41 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:45:53 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:45:54 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:47:35 [INF] info.go:370 | data:{[] 0}
+2024-04-17 16:48:48 [INF] info.go:370 | data:{[] 0}
+2024-04-17 16:48:48 [INF] info.go:370 | data:{[] 0}
+2024-04-17 16:48:51 [INF] info.go:370 | data:{[] 0}
+2024-04-17 16:48:52 [INF] info.go:370 | data:{[] 0}
+2024-04-17 16:49:25 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:49:25 [INF] config.go:88 | table users already exists
+2024-04-17 16:49:25 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:49:33 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 16:49:35 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 16:50:02 [INF] info.go:370 | data:{[] 100}
+2024-04-17 16:54:55 [INF] config.go:52 | Begin Seelog
+2024-04-17 16:54:55 [INF] config.go:88 | table users already exists
+2024-04-17 16:54:55 [INF] config.go:95 | table userssh already exists
+2024-04-17 16:56:21 [INF] info.go:370 | data:{[] 100}
+2024-04-17 17:02:58 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 17:03:00 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 17:03:19 [INF] info.go:370 | data:{[15.87 15.86 15.87 15.87 15.86] 100}
+2024-04-17 17:15:46 [INF] config.go:52 | Begin Seelog
+2024-04-17 17:15:46 [INF] config.go:88 | table users already exists
+2024-04-17 17:15:46 [INF] config.go:95 | table userssh already exists
+2024-04-17 17:16:12 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 17:16:14 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 17:16:33 [INF] info.go:372 | data:[]
+2024-04-17 17:17:00 [INF] info.go:372 | data:[]
+2024-04-17 17:17:06 [INF] info.go:372 | data:[]
+2024-04-17 17:18:04 [INF] config.go:52 | Begin Seelog
+2024-04-17 17:18:04 [INF] config.go:88 | table users already exists
+2024-04-17 17:18:04 [INF] config.go:95 | table userssh already exists
+2024-04-17 17:18:13 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 17:18:15 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 17:18:33 [INF] info.go:371 | data:15.87
+2024-04-17 17:20:20 [INF] info.go:371 | data:
+2024-04-17 17:20:20 [INF] info.go:371 | data:
+2024-04-17 17:20:21 [INF] info.go:371 | data:
+2024-04-17 17:20:22 [INF] info.go:371 | data:
+2024-04-17 17:20:39 [INF] config.go:52 | Begin Seelog
+2024-04-17 17:20:39 [INF] config.go:88 | table users already exists
+2024-04-17 17:20:39 [INF] config.go:95 | table userssh already exists
+2024-04-17 17:20:49 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 17:20:51 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 17:21:10 [INF] info.go:375 | data:[15.88 15.88 15.88 15.87 15.88]
+2024-04-17 17:23:22 [INF] config.go:52 | Begin Seelog
+2024-04-17 17:23:22 [INF] config.go:88 | table users already exists
+2024-04-17 17:23:22 [INF] config.go:95 | table userssh already exists
+2024-04-17 17:23:49 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 17:23:51 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 17:26:58 [INF] config.go:52 | Begin Seelog
+2024-04-17 17:26:58 [INF] config.go:88 | table users already exists
+2024-04-17 17:26:58 [INF] config.go:95 | table userssh already exists
+2024-04-17 17:27:06 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-17 17:27:08 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-17 17:27:35 [INF] info.go:375 | data:[15.89 15.88 15.88 15.88 15.89]
+2024-04-17 17:27:35 [INF] info.go:400 | output:Received: [15.89 15.88 15.88 15.88 15.89]
+
+
+2024-04-18 18:40:51 [INF] config.go:52 | Begin Seelog
+2024-04-18 18:40:51 [INF] config.go:88 | table users already exists
+2024-04-18 18:40:51 [INF] config.go:95 | table userssh already exists
+2024-04-18 18:41:17 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-18 18:41:19 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-18 18:43:37 [INF] info.go:375 | data:[17.78 17.79 17.78 17.77 17.8 17.81 17.81 17.81 17.81 17.81 17.8 17.81 17.8 17.79 17.8 17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79 17.8 17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77 17.79 17.79 17.79 17.78 17.8 17.8 17.8]
+2024-04-18 18:43:40 [INF] info.go:400 | output:
+2024-04-18 18:51:17 [INF] info.go:375 | data:[]
+2024-04-18 18:51:29 [INF] info.go:400 | output:
+2024-04-18 18:53:24 [INF] info.go:375 | data:[]
+2024-04-18 18:53:27 [INF] info.go:400 | output:
+2024-04-18 18:55:18 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-18 18:55:20 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-18 18:55:24 [INF] info.go:375 | data:[]
+2024-04-18 18:55:27 [INF] info.go:400 | output:
+2024-04-18 18:57:26 [INF] info.go:375 | data:[17.78 17.79 17.78 17.77 17.8 17.81 17.81 17.81 17.81 17.81 17.8 17.81 17.8 17.79 17.8 17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79 17.8 17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77 17.79 17.79 17.79 17.78 17.8 17.8 17.8]
+2024-04-18 18:57:29 [INF] info.go:400 | output:
+2024-04-18 19:14:43 [INF] config.go:52 | Begin Seelog
+2024-04-18 19:14:43 [INF] config.go:88 | table users already exists
+2024-04-18 19:14:43 [INF] config.go:95 | table userssh already exists
+2024-04-18 19:16:32 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-18 19:16:36 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-18 19:16:57 [INF] info.go:397 | output:
+2024-04-18 19:29:00 [INF] config.go:52 | Begin Seelog
+2024-04-18 19:29:00 [INF] config.go:88 | table users already exists
+2024-04-18 19:29:00 [INF] config.go:95 | table userssh already exists
+2024-04-18 19:30:51 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-18 19:30:53 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-18 19:40:50 [INF] config.go:52 | Begin Seelog
+2024-04-18 19:40:50 [INF] config.go:88 | table users already exists
+2024-04-18 19:40:50 [INF] config.go:95 | table userssh already exists
+2024-04-18 19:41:03 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-18 19:41:05 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器

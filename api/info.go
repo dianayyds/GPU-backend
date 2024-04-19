@@ -1,11 +1,15 @@
 package api
 
 import (
+	"bytes"
+	"fmt"
 	"gin_exercise/config"
 	"gin_exercise/controller"
 	"gin_exercise/dao"
+	"io"
 	"log"
 	"math"
+	"os"
 	"strconv"
 	"strings"
 
@@ -364,37 +368,52 @@ func WinfoHandler(g *gin.Context) {
 }
 
 func LstmHandler(g *gin.Context) {
-	requestData :=controller.RequestData{}
-	g.Bind(&requestData)
-	seelog.Info("data:", requestData)
+	LSTM := controller.LstmData{}
+	g.Bind(&LSTM)
+	data := LSTM.Data
+
+	client := SshConnect
+	command := "cd project && /home/ycx/anaconda3/envs/pytorch/bin/python /home/ycx/project/remote.py"
+	session, _ := client.NewSession()
+
+	defer session.Close()
+
+	// 创建一个stdin管道用来发送数据到远程Python脚本
+	stdin, _ := session.StdinPipe()
+	output, _ := session.StdoutPipe()
+	stderr, _ := session.StderrPipe()
+	// 从远程Python脚本接收输出
+	var b bytes.Buffer
+	session.Stdout = &b
+
+	// 运行远程Python脚本
+	err := session.Start(command)
+	if err != nil {
+		seelog.Error("Failed to start session:", err)
+		g.JSON(500, gin.H{"error": "Failed to start command"})
+		return
+	}
+
+	go io.Copy(os.Stdout, output)
+	go io.Copy(os.Stderr, stderr)
+
+	fmt.Fprintln(stdin, data)
+	stdin.Close()
+
+	// 等待脚本执行结束
+	err = session.Wait()
+
+	if err != nil {
+		seelog.Error("Failed to wait for command to finish:", err)
+		g.JSON(500, gin.H{"error": "Failed to wait for command to finish"})
+		return
+	}
+
+	seelog.Info("output:", b.String())
+
 	g.JSON(200, gin.H{
-		"code":   0,
-		"output": requestData.Data,
+		"code":    0,
+		"output":  data,
+		"outputb": b.String(),
 	})
-	
-	// client := SshConnect
-	// command := "cd project && /home/ycx/anaconda3/envs/pytorch/bin/python /home/ycx/project/remote.py"
-	// session, _ := client.NewSession()
-
-	// defer session.Close()
-
-	// // 创建一个stdin管道用来发送数据到远程Python脚本
-	// stdin, _ := session.StdinPipe()
-
-	// // 从远程Python脚本接收输出
-	// var b bytes.Buffer
-	// session.Stdout = &b
-
-	// // 运行远程Python脚本
-	// session.Start(command)
-
-	// // 向Python脚本发送数据
-	// fmt.Fprintln(stdin, data)
-	// stdin.Close()
-
-	// // 等待脚本执行结束
-	// session.Wait()
-
-	
-
 }

@@ -35,7 +35,7 @@ func Initroute() {
 		v1.POST("/delete_user", api.DeleteUserHandler)
 		v1.POST("/gpt", api.GptHandler)
 		v1.POST("/ssh_connect", api.SshConnectHandler)
-		v1.POST("/lstm_info", api.LstmHandler)
+		v1.GET("/lstm_info", api.LstmHandler)
 		v1.GET("/cpu_info", api.CpuinfoHandler)
 		v1.GET("/memory_info", api.MemoryinfoHandler)
 		v1.GET("/gpu_info", api.GpuinfoHandler)

@@ -13,8 +13,8 @@ type Userssh struct {
 	Password string
 }
 
-type RequestData struct {
-	Data []float64 // 根据实际数组元素类型调整
+type LstmData struct {
+	Data [] float64 `json:"data"`
 }
 
 type Mytoken struct {
