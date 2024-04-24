@@ -6,10 +6,8 @@ import (
 	"gin_exercise/config"
 	"gin_exercise/controller"
 	"gin_exercise/dao"
-	"io"
 	"log"
 	"math"
-	"os"
 	"strconv"
 	"strings"
 
@@ -371,21 +369,15 @@ func LstmHandler(g *gin.Context) {
 	LSTM := controller.LstmData{}
 	g.Bind(&LSTM)
 	data := LSTM.Data
-
 	client := SshConnect
 	command := "cd project && /home/ycx/anaconda3/envs/pytorch/bin/python /home/ycx/project/remote.py"
 	session, _ := client.NewSession()
-
 	defer session.Close()
-
 	// 创建一个stdin管道用来发送数据到远程Python脚本
 	stdin, _ := session.StdinPipe()
-	output, _ := session.StdoutPipe()
-	stderr, _ := session.StderrPipe()
 	// 从远程Python脚本接收输出
 	var b bytes.Buffer
 	session.Stdout = &b
-
 	// 运行远程Python脚本
 	err := session.Start(command)
 	if err != nil {
@@ -393,27 +385,25 @@ func LstmHandler(g *gin.Context) {
 		g.JSON(500, gin.H{"error": "Failed to start command"})
 		return
 	}
-
-	go io.Copy(os.Stdout, output)
-	go io.Copy(os.Stderr, stderr)
-
-	fmt.Fprintln(stdin, data)
+	// 将float64数组转换为以空格分隔的字符串
+	dataStrings := make([]string, len(data))
+	for i, num := range data {
+		dataStrings[i] = fmt.Sprintf("%f", num)
+	}
+	dataStr := strings.Join(dataStrings, " ")
+	fmt.Fprintln(stdin, dataStr)
 	stdin.Close()
-
 	// 等待脚本执行结束
 	err = session.Wait()
-
 	if err != nil {
 		seelog.Error("Failed to wait for command to finish:", err)
 		g.JSON(500, gin.H{"error": "Failed to wait for command to finish"})
 		return
 	}
-
-	seelog.Info("output:", b.String())
-
+	pred, _ := strconv.ParseFloat(strings.TrimSpace(b.String()), 64)
+	seelog.Info("产生预测值:", pred)
 	g.JSON(200, gin.H{
-		"code":    0,
-		"output":  data,
-		"outputb": b.String(),
+		"code": 0,
+		"pred": pred,
 	})
 }

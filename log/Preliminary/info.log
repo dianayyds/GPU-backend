@@ -733,3 +733,388 @@
 2024-04-18 19:40:50 [INF] config.go:95 | table userssh already exists
 2024-04-18 19:41:03 [INF] user.go:75 | 用户yinchenxu登录成功
 2024-04-18 19:41:05 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 09:40:03 [INF] config.go:52 | Begin Seelog
+2024-04-19 09:40:03 [INF] config.go:88 | table users already exists
+2024-04-19 09:40:03 [INF] config.go:95 | table userssh already exists
+2024-04-19 09:42:52 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 10:03:22 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 10:03:31 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 10:25:50 [INF] user.go:29 | 用户yinchenxu1注册成功
+2024-04-19 10:25:53 [INF] user.go:75 | 用户yinchenxu1登录成功
+2024-04-19 10:26:10 [INF] user.go:185 | 用户yinchenxu1开始监测211.71.76.205服务器
+2024-04-19 10:58:38 [INF] config.go:52 | Begin Seelog
+2024-04-19 10:58:38 [INF] config.go:88 | table users already exists
+2024-04-19 10:58:38 [INF] config.go:95 | table userssh already exists
+2024-04-19 10:58:53 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 10:58:56 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 10:59:20 [INF] info.go:413 | output:Received: 43
+
+2024-04-19 10:59:58 [INF] info.go:413 | output:Received: [17.78 17.79 17.78 17.77 17.8  17.81 17.81 17.81 17.81 17.81 17.8  17.81
+ 17.8  17.79 17.8  17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79
+ 17.8  17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77
+ 17.79 17.79 17.79 17.78 17.8  17.8  17.8 ]
+
+2024-04-19 11:00:48 [INF] info.go:413 | output:Received: [17.78, 17.79, 17.78, 17.77, 17.8, 17.81, 17.81, 17.81, 17.81, 17.81, 17.8, 17.81, 17.8, 17.79, 17.8, 17.79, 17.81, 17.81, 17.81, 17.81, 17.82, 17.83, 17.82, 17.79, 17.8, 17.79, 17.76, 17.78, 17.78, 17.78, 17.78, 17.78, 17.78, 17.78, 17.77, 17.77, 17.79, 17.79, 17.79, 17.78, 17.8, 17.8, 17.8]
+
+2024-04-19 11:01:18 [INF] info.go:413 | output:17.780000 17.790000 17.780000 17.770000 17.800000 17.810000 17.810000 17.810000 17.810000 17.810000 17.800000 17.810000 17.800000 17.790000 17.800000 17.790000 17.810000 17.810000 17.810000 17.810000 17.820000 17.830000 17.820000 17.790000 17.800000 17.790000 17.760000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.770000 17.770000 17.790000 17.790000 17.790000 17.780000 17.800000 17.800000 17.800000
+
+
+2024-04-19 11:02:19 [INF] config.go:52 | Begin Seelog
+2024-04-19 11:02:19 [INF] config.go:88 | table users already exists
+2024-04-19 11:02:19 [INF] config.go:95 | table userssh already exists
+2024-04-19 11:02:40 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 11:02:42 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 11:02:47 [INF] info.go:413 | output:17.780000 17.790000 17.780000 17.770000 17.800000 17.810000 17.810000 17.810000 17.810000 17.810000 17.800000 17.810000 17.800000 17.790000 17.800000 17.790000 17.810000 17.810000 17.810000 17.810000 17.820000 17.830000 17.820000 17.790000 17.800000 17.790000 17.760000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.770000 17.770000 17.790000 17.790000 17.790000 17.780000 17.800000 17.800000 17.800000
+
+
+2024-04-19 11:08:33 [INF] info.go:413 | output:Received: [17.78 17.79 17.78 17.77 17.8  17.81 17.81 17.81 17.81 17.81 17.8  17.81
+ 17.8  17.79 17.8  17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79
+ 17.8  17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77
+ 17.79 17.79 17.79 17.78 17.8  17.8  17.8 ]
+
+2024-04-19 11:09:12 [INF] info.go:413 | output:17.780000 17.790000 17.780000 17.770000 17.800000 17.810000 17.810000 17.810000 17.810000 17.810000 17.800000 17.810000 17.800000 17.790000 17.800000 17.790000 17.810000 17.810000 17.810000 17.810000 17.820000 17.830000 17.820000 17.790000 17.800000 17.790000 17.760000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.770000 17.770000 17.790000 17.790000 17.790000 17.780000 17.800000 17.800000 17.800000
+
+[17.78, 17.79, 17.78, 17.77, 17.8, 17.81, 17.81, 17.81, 17.81, 17.81, 17.8, 17.81, 17.8, 17.79, 17.8, 17.79, 17.81, 17.81, 17.81, 17.81, 17.82, 17.83, 17.82, 17.79, 17.8, 17.79, 17.76, 17.78, 17.78, 17.78, 17.78, 17.78, 17.78, 17.78, 17.77, 17.77, 17.79, 17.79, 17.79, 17.78, 17.8, 17.8, 17.8]
+Received: [17.78 17.79 17.78 17.77 17.8  17.81 17.81 17.81 17.81 17.81 17.8  17.81
+ 17.8  17.79 17.8  17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79
+ 17.8  17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77
+ 17.79 17.79 17.79 17.78 17.8  17.8  17.8 ]
+
+2024-04-19 11:09:53 [INF] info.go:413 | output:17.780000 17.790000 17.780000 17.770000 17.800000 17.810000 17.810000 17.810000 17.810000 17.810000 17.800000 17.810000 17.800000 17.790000 17.800000 17.790000 17.810000 17.810000 17.810000 17.810000 17.820000 17.830000 17.820000 17.790000 17.800000 17.790000 17.760000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.770000 17.770000 17.790000 17.790000 17.790000 17.780000 17.800000 17.800000 17.800000
+
+
+2024-04-19 15:12:30 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 15:12:34 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 16:37:00 [INF] info.go:413 | output:[17.78 17.79 17.78 17.77 17.8  17.81 17.81 17.81 17.81 17.81 17.8  17.81
+ 17.8  17.79 17.8  17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79
+ 17.8  17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77
+ 17.79 17.79 17.79 17.78 17.8  17.8  17.8 ]
+
+2024-04-19 16:38:53 [INF] info.go:413 | output:[17.78 17.79 17.78 17.77 17.8  17.81 17.81 17.81 17.81 17.81 17.8  17.81
+ 17.8  17.79 17.8  17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79
+ 17.8  17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77
+ 17.79 17.79 17.79 17.78 17.8  17.8  17.8 ]
+
+2024-04-19 16:39:39 [INF] info.go:413 | output:17.780000 17.790000 17.780000 17.770000 17.800000 17.810000 17.810000 17.810000 17.810000 17.810000 17.800000 17.810000 17.800000 17.790000 17.800000 17.790000 17.810000 17.810000 17.810000 17.810000 17.820000 17.830000 17.820000 17.790000 17.800000 17.790000 17.760000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.780000 17.770000 17.770000 17.790000 17.790000 17.790000 17.780000 17.800000 17.800000 17.800000
+
+
+2024-04-19 16:43:00 [INF] info.go:413 | output:[17.78 17.79 17.78 17.77 17.8  17.81 17.81 17.81 17.81 17.81 17.8  17.81
+ 17.8  17.79 17.8  17.79 17.81 17.81 17.81 17.81 17.82 17.83 17.82 17.79
+ 17.8  17.79 17.76 17.78 17.78 17.78 17.78 17.78 17.78 17.78 17.77 17.77
+ 17.79 17.79 17.79 17.78 17.8  17.8  17.8 ]
+
+2024-04-19 16:45:43 [INF] info.go:413 | output:0 : 17.78 
+
+1 : 17.79 
+
+2 : 17.78 
+
+3 : 17.77 
+
+4 : 17.8 
+
+5 : 17.81 
+
+6 : 17.81 
+
+7 : 17.81 
+
+8 : 17.81 
+
+9 : 17.81 
+
+10 : 17.8 
+
+11 : 17.81 
+
+12 : 17.8 
+
+13 : 17.79 
+
+14 : 17.8 
+
+15 : 17.79 
+
+16 : 17.81 
+
+17 : 17.81 
+
+18 : 17.81 
+
+19 : 17.81 
+
+20 : 17.82 
+
+21 : 17.83 
+
+22 : 17.82 
+
+23 : 17.79 
+
+24 : 17.8 
+
+25 : 17.79 
+
+26 : 17.76 
+
+27 : 17.78 
+
+28 : 17.78 
+
+29 : 17.78 
+
+30 : 17.78 
+
+31 : 17.78 
+
+32 : 17.78 
+
+33 : 17.78 
+
+34 : 17.77 
+
+35 : 17.77 
+
+36 : 17.79 
+
+37 : 17.79 
+
+38 : 17.79 
+
+39 : 17.78 
+
+40 : 17.8 
+
+41 : 17.8 
+
+42 : 17.8 
+
+
+2024-04-19 16:47:27 [INF] info.go:413 | output:[17.78, 17.79, 17.78, 17.77, 17.8, 17.81, 17.81, 17.81, 17.81, 17.81, 17.8, 17.81, 17.8, 17.79, 17.8, 17.79, 17.81, 17.81, 17.81, 17.81, 17.82, 17.83, 17.82, 17.79, 17.8, 17.79, 17.76, 17.78, 17.78, 17.78, 17.78, 17.78, 17.78, 17.78, 17.77, 17.77, 17.79, 17.79, 17.79, 17.78, 17.8, 17.8, 17.8]
+
+2024-04-19 16:52:07 [INF] info.go:413 | output:[array([[0.2857143 ],
+       [0.42857143],
+       [0.2857143 ],
+       [0.14285715],
+       [0.5714286 ],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.5714286 ],
+       [0.71428573],
+       [0.5714286 ],
+       [0.42857143],
+       [0.5714286 ],
+       [0.42857143],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.85714287],
+       [1.        ],
+       [0.85714287],
+       [0.42857143],
+       [0.5714286 ],
+       [0.42857143],
+       [0.        ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.14285715],
+       [0.14285715],
+       [0.42857143],
+       [0.42857143],
+       [0.42857143],
+       [0.2857143 ]], dtype=float32), array([[0.42857143],
+       [0.2857143 ],
+       [0.14285715],
+       [0.5714286 ],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.5714286 ],
+       [0.71428573],
+       [0.5714286 ],
+       [0.42857143],
+       [0.5714286 ],
+       [0.42857143],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.85714287],
+       [1.        ],
+       [0.85714287],
+       [0.42857143],
+       [0.5714286 ],
+       [0.42857143],
+       [0.        ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.14285715],
+       [0.14285715],
+       [0.42857143],
+       [0.42857143],
+       [0.42857143],
+       [0.2857143 ],
+       [0.5714286 ]], dtype=float32), array([[0.2857143 ],
+       [0.14285715],
+       [0.5714286 ],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.5714286 ],
+       [0.71428573],
+       [0.5714286 ],
+       [0.42857143],
+       [0.5714286 ],
+       [0.42857143],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.71428573],
+       [0.85714287],
+       [1.        ],
+       [0.85714287],
+       [0.42857143],
+       [0.5714286 ],
+       [0.42857143],
+       [0.        ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.2857143 ],
+       [0.14285715],
+       [0.14285715],
+       [0.42857143],
+       [0.42857143],
+       [0.42857143],
+       [0.2857143 ],
+       [0.5714286 ],
+       [0.5714286 ]], dtype=float32)]
+
+2024-04-19 16:53:18 [INF] info.go:413 | output:[17.72424041 17.72811209 17.72267371]
+
+2024-04-19 16:53:52 [INF] info.go:413 | output:43
+
+2024-04-19 16:54:24 [INF] info.go:413 | output:[17.71218734]
+
+2024-04-19 17:17:35 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 17:17:37 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 17:17:47 [INF] info.go:413 | output:17.72436242282391
+
+2024-04-19 17:27:44 [INF] config.go:52 | Begin Seelog
+2024-04-19 17:27:44 [INF] config.go:88 | table users already exists
+2024-04-19 17:27:44 [INF] config.go:95 | table userssh already exists
+2024-04-19 17:27:54 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 17:28:02 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 17:28:14 [INF] info.go:414 | output:17.70748475849629
+
+2024-04-19 17:30:01 [INF] config.go:52 | Begin Seelog
+2024-04-19 17:30:01 [INF] config.go:88 | table users already exists
+2024-04-19 17:30:01 [INF] config.go:95 | table userssh already exists
+2024-04-19 17:32:45 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 17:32:47 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:53 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:54 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:54 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:56 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:56 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:58 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:34:58 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:00 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:00 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:02 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:02 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:04 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:04 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:06 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:06 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:08 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:08 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:10 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:10 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:12 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:12 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:14 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:14 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:16 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:16 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:18 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:18 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:20 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:20 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:22 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:22 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:24 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:24 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:26 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:26 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:28 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:28 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:30 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:30 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:32 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:32 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:34 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:34 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:36 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:37 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:39 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:39 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:40 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:40 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:43 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:43 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:45 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:45 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:47 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:47 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:49 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:49 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:51 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:51 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:52 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:52 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:54 [INF] info.go:28 | Failed to run cpu usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:35:54 [INF] info.go:94 | Failed to run memory usage command: %sread tcp 10.60.218.243:63019->211.71.76.205:22: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2024-04-19 17:36:14 [INF] user.go:75 | 用户yinchenxu登录成功
+2024-04-19 17:36:16 [INF] user.go:185 | 用户yinchenxu开始监测211.71.76.205服务器
+2024-04-19 17:37:56 [INF] info.go:416 | 产生预测值:25.472854518890383
